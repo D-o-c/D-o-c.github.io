@@ -1,4 +1,7 @@
 <?
+echo '<script>';
+  echo 'console.log('. json_encode( "PHP started") .')';
+  echo '</script>';
 $name  = $_REQUEST["name"];
 $email = $_REQUEST["email"];
 $mobile   = $_REQUEST["mobile"];
