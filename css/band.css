@@ -706,3 +706,10 @@ margin: 0;
 padding: 0;	
 }
 
+
+.cube {
+	object-fit: cover;
+	object-position: 100% 0;
+	width: 221px;
+	height: 220px;
+}
