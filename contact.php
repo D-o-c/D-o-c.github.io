@@ -12,7 +12,9 @@ $headers .= "From: ".$name." <".$email.">\r\n"."Reply-To: ".$email."\r\n" ;
 $msg     = "From: $name<br/> Email: $email <br/> Mobile: $mobile <br/>Message: $msg";
 	
    $mail =  mail($to, $subject, $msg, $headers);
-	var_dump($mail);
+	echo '<script>';
+  echo 'console.log('. json_encode( $mail ) .')';
+  echo '</script>';
   if($mail)
 	{
 		echo 'success';
@@ -23,5 +25,8 @@ else
 		echo 'failed';
 	}
 }
+echo '<script>';
+  echo 'console.log('. json_encode( "finito") .')';
+  echo '</script>';
 
 ?>
