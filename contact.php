@@ -3,7 +3,7 @@ $name  = $_REQUEST["name"];
 $email = $_REQUEST["email"];
 $mobile   = $_REQUEST["mobile"];
 $msg   = $_REQUEST["msg"];
-$to    = "info@gmail.com";
+$to    = "info@runningclouds.it";
 if (isset($email) && isset($name) && isset($msg)) {
     $subject = "$name sent you a message via Raaga";
 		$headers = "MIME-Version: 1.0" . "\r\n";
@@ -12,6 +12,7 @@ $headers .= "From: ".$name." <".$email.">\r\n"."Reply-To: ".$email."\r\n" ;
 $msg     = "From: $name<br/> Email: $email <br/> Mobile: $mobile <br/>Message: $msg";
 	
    $mail =  mail($to, $subject, $msg, $headers);
+	var_dump($mail);
   if($mail)
 	{
 		echo 'success';
